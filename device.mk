@@ -25,9 +25,13 @@ AB_OTA_POSTINSTALL_CONFIG += \
 
 # Boot control HAL
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.0-impl.recovery \
+    android.hardware.boot@1.0-impl \
     android.hardware.boot@1.0-service \
-		bootctrl.$(PRODUCT_PLATFORM).recovery
+    android.hardware.boot@1.0-impl-wrapper.recovery \
+    android.hardware.boot@1.0-impl-wrapper \
+    android.hardware.boot@1.0-impl.recovery \
+    bootctrl.$(PRODUCT_PLATFORM) \
+    bootctrl.$(PRODUCT_PLATFORM).recovery \
 
 PRODUCT_COPY_FILES += \
     $(OUT_DIR)/target/product/$(PRODUCT_RELEASE_NAME)/obj/SHARED_LIBRARIES/libandroidicu_intermediates/libandroidicu.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libandroidicu.so
